@@ -1,0 +1,60 @@
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 80px;
+    justify-items: center;
+    grid-template-areas: 
+                "header"
+                "main"
+                "footer";
+    
+}
+
+.site-header {
+    background-color: rgb(231, 121, 18);
+    grid-area: header;
+}
+
+.content {
+    grid-area: main;
+    align-self: center;
+    background-color: rgb(238, 229, 98);
+}
+
+.site-footer {
+    grid-area: footer;
+    background-color: rgb(74, 218, 74);
+}
+
+.game-field {
+    display: grid;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.slot {
+    background-color: red
+}
+
+.flex-wrapper {
+    display: flex;
+    flex: 1 1 1;
+    width: 1255px;
+    min-width: auto;
+}
+
+@media screen and (max-width: 720px) {
+    .game-field {
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(6, 100px);
+        grid-gap: 5px;
+    }
+    .grid-wrapper {
+        grid-template-columns: 625px;
+    }
+    .flex-wrapper {
+        width: 625px;
+    }
+}
