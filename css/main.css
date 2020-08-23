@@ -26,36 +26,27 @@
 }
 
 .game-field {
-    display: grid;
-    grid-template-columns: repeat(12, 100px);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1260px;
 }
 
 .slot {
-    display: flex;
-    min-height: 100px;
+    height: 100px;
+    width: 100px;
+    margin: 2.5px;
     background-color: red
+}
+
+.target {
+    background-color: green;
 }
 
 .flex-wrapper {
     display: flex;
-    flex: 1 1 1;
-    width: 1255px;
-    min-width: auto;
 }
 
-@media screen and (max-width: 720px) {
-    .game-field {
-        display: grid;
-        grid-template-columns: repeat(6, 100px);
-        grid-template-rows: repeat(6, 100px);
-        grid-gap: 5px;
-    }
-    .grid-wrapper {
-        grid-template-columns: 625px;
-    }
-    .flex-wrapper {
-        width: 625px;
-    }
+.top-field {
+    width: 100%;
+    flex-grow: 1;
 }
