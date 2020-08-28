@@ -30,10 +30,10 @@ function round() {
 const gameField = document.getElementsByClassName('j-game-field')['0'];
 gameField.addEventListener('click', {
     handleEvent: function (event) { 
-        if (event.explicitOriginalTarget.classList['2'] == 'target') {
+        if (event.target.classList['2'] == 'target') {
             hits++;
-            event.explicitOriginalTarget.classList.remove('target')
-            event.explicitOriginalTarget.textContent = ""
+            event.target.classList.remove('target')
+            event.target.textContent = ""
             if (hits <= maxHits) {
                 round();
             } else {
@@ -41,9 +41,9 @@ gameField.addEventListener('click', {
             }
         } else {
             missClick++; 
-            event.explicitOriginalTarget.classList.add('miss');
+            event.target.classList.add('miss');
             setTimeout(() => {
-                event.explicitOriginalTarget.classList.remove('miss'); 
+                event.target.classList.remove('miss'); 
             }, 1000);
         }
     }
