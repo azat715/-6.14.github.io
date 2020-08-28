@@ -53,8 +53,6 @@ function endGame() {
     totalPlayedSeconds = times.end();
     gameField.style['pointer-events'] = "none";
     gameField.style['opacity'] = "0.4";
-    console.log(missClick);
-    console.log(totalPlayedSeconds);
     resWin.style['opacity'] = "1";
     resWin.style['visibility'] = "visible";
     let resDiv = document.createElement('div');
